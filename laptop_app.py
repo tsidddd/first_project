@@ -7,7 +7,7 @@ st.text("This app is using only a select few laptops(around 1200 laptops), so it
 company = st.selectbox("Manufacturer of the laptop",df['Company'].unique(),index=4)
 typename = st.radio("Type of the laptop",df['TypeName'].unique(),horizontal=True,index=1)
 cpu = st.selectbox("Processor",df['Cpu'].unique())
-ram = st.pills("RAM on the system(in GB)",[4,8,12,16,24,32,64,128],default='4')
+ram = st.pills("RAM on the system(in GB)",[4,8,12,16,24,32,64,128],default='8')
 gpu=st.radio("Graphics Card",df['Gpu'].unique(),index=1,horizontal=True)
 os=st.selectbox("Operating System",df['OpSys'].unique(),index=2)
 weight=st.slider("Weight of the laptop(in kgs)",min_value=0.7,max_value=4.8,value=2.1)
