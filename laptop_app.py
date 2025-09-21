@@ -7,7 +7,7 @@ st.text("This app is using only a select few laptops(around 1200 laptops), so it
 company = st.selectbox("Manufacturer of the laptop",df['Company'].unique(),index=4)
 typename = st.radio("Type of the laptop",df['TypeName'].unique(),horizontal=True,index=1)
 cpu = st.selectbox("Processor",df['Cpu'].unique())
-ram = st.pills("RAM on the system(in GB)",[4,8,12,16,24,32,64,128],default='8')
+ram = st.pills("RAM on the system(in GB)",[4,8,12,16,24,32,64,128],default=8)
 gpu=st.radio("Graphics Card",df['Gpu'].unique(),index=1,horizontal=True)
 os=st.selectbox("Operating System",df['OpSys'].unique(),index=2)
 weight=st.slider("Weight of the laptop(in kgs)",min_value=0.7,max_value=4.8,value=2.1)
@@ -15,8 +15,8 @@ touchscreen=st.pills("Does the laptop have touchscreen?",['Yes','No'],default='N
 ips=st.pills("Does the laptop have an IPS display?",['Yes','No'],default='No')
 cpu_speed=st.slider("Clock Speed of CPU(in GHz)",min_value=0.9,max_value=3.6,step=0.1,value=2.3)
 hdd=st.pills("Hard disk size on the system(in GB). If there is SSD, select this as 0",
-             [0,512,1024,2000],default='0')
-ssd=st.pills("SSD storage on the system(in GB).",[0,256,512,1024,2000],default='0')
+             [0,512,1024,2000],default=0)
+ssd=st.pills("SSD storage on the system(in GB).",[0,256,512,1024,2000],default=0)
 scree_size=st.slider("Screen size(measured diagonally, in inches)",min_value=10.0,max_value=18.4,value=15.6,step=0.1)
 screen_resolution=st.selectbox("Laptop Screen Resolution (in pixels)",["2560x1600","1440x900","1920x1080","2880x1800","1366x768","2304x1440","3200x1800","1920x1200","2256x1504",
   "3840x2160","2160x1440","2560x1440","1600x900","2736x1824","2400x1600"],index=2)
